@@ -73,7 +73,7 @@ export default function Navbar(props) {
 
         <Box
           as="main"
-          p={14}
+          p={3}
           minH="25rem"
           bg={useColorModeValue("auto", "gray.800")}
         >

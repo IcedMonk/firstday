@@ -1,6 +1,5 @@
 import * as React from "react";
 import {
-  Container,
   Box,
   chakra,
   Flex,
@@ -26,6 +25,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import Carasous from "./Carasous";
+import { Link } from "react-router-dom";
 
 const networks = [
   {
@@ -134,7 +134,7 @@ const HomePage = () => {
     />;
   };
   return (
-    <Container maxW="7xl" py={10} px={4}>
+    <>
       <Box
         border="1px solid"
         borderColor="gray.400"
@@ -142,11 +142,15 @@ const HomePage = () => {
         boxShadow="lg"
         overflow="hidden"
       >
-        <Flex justify="left" p={5}>
-          <chakra.h3 fontSize="xl" fontWeight="bold" textAlign="center">
+        <Flex justify="space-between" align="center" p={3}>
+          <chakra.h3 fontSize="xl" fontWeight="bold">
             Faulty Products
           </chakra.h3>
+          <Link to="/test">
+            <Button colorScheme="teal">Add Product</Button>
+          </Link>
         </Flex>
+
         <Divider />
         <TableContainer>
           <Table size="md">
@@ -202,7 +206,7 @@ const HomePage = () => {
           </ModalFooter>
         </ModalContent>
       </Modal>
-    </Container>
+    </>
   );
 };
 
