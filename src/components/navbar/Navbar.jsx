@@ -116,7 +116,7 @@ const SidebarContent = ({ ...props }) => (
         src="../assets/logo.png"
         fallbackSrc="https://i.ibb.co/jJ9Dq0H/Microsoft-Teams-image-2.jpg"
         w={60}
-        h={25}
+        h={50}
       />
     </Flex>
     <Flex
