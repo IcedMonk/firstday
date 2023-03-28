@@ -60,7 +60,7 @@ export default function VerifyAuthForm() {
             </HStack>
           </Center>
         </FormControl>
-        <Link to={"/"}>
+        <Link to={"/damage"}>
           <Stack spacing={6}>
             <Button
               bg={"blue.400"}
