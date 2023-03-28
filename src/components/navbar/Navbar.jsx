@@ -115,7 +115,7 @@ const SidebarContent = ({ ...props }) => (
       <Image
         src="../assets/logo.png"
         fallbackSrc="https://i.ibb.co/jJ9Dq0H/Microsoft-Teams-image-2.jpg"
-        w={60}
+        w={100}
         h={50}
       />
     </Flex>
@@ -126,16 +126,16 @@ const SidebarContent = ({ ...props }) => (
       color="gray.600"
       aria-label="Main Navigation"
     >
-      <Link to="/">
+      {/* <Link to="/">
         <NavItem icon={AiOutlineHome}>Dashboard</NavItem>
       </Link>
-      <NavItem icon={AiOutlineTeam}>All Products</NavItem>
+      <NavItem icon={AiOutlineTeam}>All Products</NavItem> */}
       <Link to="/test">
         <NavItem icon={BsFolder2}>Add Products</NavItem>
       </Link>
-      <Link to="/damage">
+      {/* <Link to="/damage">
         <NavItem icon={BsCalendarCheck}>Damaged products</NavItem>
-      </Link>
+      </Link> */}
     </Flex>
   </Box>
 );
