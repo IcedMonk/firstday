@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Box, Flex, HStack, Image, Text } from "@chakra-ui/react";
 
-const Carasous = () => {
+const Carasous = (props) => {
   const arrowStyles = {
     cursor: "pointer",
     pos: "absolute",

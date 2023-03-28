@@ -21,6 +21,7 @@ import { AiOutlineTeam, AiOutlineHome } from "react-icons/ai";
 import { BsFolder2, BsCalendarCheck } from "react-icons/bs";
 import { FiMenu } from "react-icons/fi";
 import { RiFlashlightFill } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
   const { isOpen, onClose, onOpen } = useDisclosure();
@@ -49,7 +50,7 @@ export default function Navbar(props) {
           borderColor={useColorModeValue("inherit", "gray.700")}
           bg={useColorModeValue("white", "gray.800")}
           boxShadow="sm"
-          h="14"
+          h="16"
         >
           <IconButton
             aria-label="Menu"
@@ -101,16 +102,22 @@ const SidebarContent = ({ ...props }) => (
     w="60"
     {...props}
   >
-    <Flex px="4" py="5" align="center">
-      <Icon as={RiFlashlightFill} h={8} w={8} />
+    <Flex px="2" py="2" align="center">
+      {/* <Icon as={RiFlashlightFill} h={8} w={8} />
       <Text
         fontSize="2xl"
         ml="2"
         color={useColorModeValue("brand.500", "white")}
         fontWeight="semibold"
       >
-        POS
-      </Text>
+        VyapiSoft
+      </Text> */}
+      <Image
+        src="../assets/logo.png"
+        fallbackSrc="https://i.ibb.co/jJ9Dq0H/Microsoft-Teams-image-2.jpg"
+        w={60}
+        h={25}
+      />
     </Flex>
     <Flex
       direction="column"
@@ -119,10 +126,16 @@ const SidebarContent = ({ ...props }) => (
       color="gray.600"
       aria-label="Main Navigation"
     >
-      <NavItem icon={AiOutlineHome}>Dashboard</NavItem>
-      <NavItem icon={AiOutlineTeam}>Team</NavItem>
-      <NavItem icon={BsFolder2}>Projects</NavItem>
-      <NavItem icon={BsCalendarCheck}>Calendar</NavItem>
+      <Link to="/">
+        <NavItem icon={AiOutlineHome}>Dashboard</NavItem>
+      </Link>
+      <NavItem icon={AiOutlineTeam}>All Products</NavItem>
+      <Link to="/test">
+        <NavItem icon={BsFolder2}>Add Products</NavItem>
+      </Link>
+      <Link to="/damage">
+        <NavItem icon={BsCalendarCheck}>Damaged products</NavItem>
+      </Link>
     </Flex>
   </Box>
 );

@@ -14,19 +14,12 @@ import {
   Avatar,
   AvatarGroup,
   Tooltip,
-  ModalOverlay,
-  useDisclosure,
-  Modal,
-  ModalContent,
-  ModalHeader,
-  ModalCloseButton,
-  ModalBody,
-  ModalFooter,
   Button,
+  VisuallyHidden,
 } from "@chakra-ui/react";
-
 import FaultModal from "./FaultModal";
-import FaultForm from "./FaultForm";
+import { Link } from "react-router-dom";
+import Pagination from "./Pagination";
 
 const networks = [
   {
@@ -182,15 +175,10 @@ const networks = [
   },
 ];
 
-const HomePage = () => {
+const DamageProduct = () => {
   const [isOpen1, setIsOpen1] = useState(false);
-  const [isOpen2, setIsOpen2] = useState(false);
-
   const openModal1 = () => setIsOpen1(true);
   const closeModal1 = () => setIsOpen1(false);
-  const openModal2 = () => setIsOpen2(true);
-  const closeModal2 = () => setIsOpen2(false);
-
   return (
     <>
       <Box
@@ -199,32 +187,33 @@ const HomePage = () => {
         rounded="md"
         boxShadow="lg"
         overflow="hidden"
+        m={4}
       >
         <Flex justify="space-between" align="center" p={3}>
           <chakra.h3 fontSize="xl" fontWeight="bold" ml={5}>
             Damaged Products
           </chakra.h3>
 
-          <Button onClick={openModal2} colorScheme="teal">
-            Add Product
-          </Button>
+          <Link to="/login">
+            <Button colorScheme="teal">Logout</Button>
+          </Link>
         </Flex>
 
         <Divider />
         <TableContainer>
           <Table size="lg">
-            <Thead>
+            <Thead bgColor="#8c8987">
               <Tr fontWeight="900">
-                <Th>Receipt No.</Th>
-                <Th>Client Name</Th>
-                <Th>State Name</Th>
-                <Th>Description</Th>
-                <Th>Container No.</Th>
-                <Th>Date</Th>
-                <Th>Image</Th>
+                <Th color="white">Receipt No.</Th>
+                <Th color="white">Client Name</Th>
+                <Th color="white">State Name</Th>
+                <Th color="white">Description</Th>
+                <Th color="white">Container No.</Th>
+                <Th color="white">Date</Th>
+                <Th color="white">Image</Th>
               </Tr>
             </Thead>
-            <Tbody>
+            <Tbody bgColor="#d4d2cf">
               {networks.map((network, index) => (
                 <Tr key={index}>
                   <Td fontSize="sm">{network.ContainerNo}</Td>
@@ -252,17 +241,10 @@ const HomePage = () => {
           </Table>
         </TableContainer>
       </Box>
-      {/* {networks.map((network) => {
-        <FaultModal
-          isOpen={isOpen1}
-          onClose={closeModal1}
-          slides={network.images}
-        />;
-      })} */}
+      <Pagination />
       <FaultModal isOpen={isOpen1} onClose={closeModal1} />
-      <FaultForm isOpen={isOpen2} onClose={closeModal2} />
     </>
   );
 };
 
-export default HomePage;
+export default DamageProduct;

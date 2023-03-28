@@ -21,9 +21,14 @@ const LoginWithImage = () => {
       <Flex flex={1}>
         <Image
           alt="Cover image"
-          objectFit="cover"
-          src="https://bit.ly/2k1H1t6"
+          objectFit="unset"
+          src="https://www.theventuremag.com/wp-content/uploads/2019/03/silk-contract-logistics-1-1500x1125.jpg"
         />
+        {/* <Image
+          alt="Cover image"
+          objectFit="unset"
+          src="https://i.ibb.co/jJ9Dq0H/Microsoft-Teams-image-2.jpg"
+        /> */}
       </Flex>
       <Flex p={8} flex={1} align="center" justify="center">
         <Stack spacing={4}>
