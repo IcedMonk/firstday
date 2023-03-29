@@ -10,7 +10,7 @@ import {
 import { PinInput, PinInputField } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
-export default function VerifyAuthForm() {
+export default function VerifyAuthFormTwo() {
   return (
     <Flex
       minH={"100vh"}
@@ -60,7 +60,7 @@ export default function VerifyAuthForm() {
             </HStack>
           </Center>
         </FormControl>
-        <Link to={"/addp"}>
+        <Link to={"/damage"}>
           <Stack spacing={6}>
             <Button
               bg={"blue.400"}

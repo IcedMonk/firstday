@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
-const LoginWithImage = () => {
+const LoginWithImageTwo = () => {
   return (
     <Stack minH="100vh" direction={{ base: "column-reverse", md: "row" }}>
       <Flex flex={1}>
@@ -63,7 +63,7 @@ const LoginWithImage = () => {
                   Forgot password?
                 </Link>
               </Stack>
-              <Link to="/verify1">
+              <Link to="/verify2">
                 <Button
                   bg="green.300"
                   color="white"
@@ -84,4 +84,4 @@ const LoginWithImage = () => {
   );
 };
 
-export default LoginWithImage;
+export default LoginWithImageTwo;
