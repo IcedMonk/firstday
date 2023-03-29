@@ -28,6 +28,7 @@ import {
 } from "@chakra-ui/react";
 
 import { FaUser } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function TestForm() {
   return (
@@ -332,7 +333,7 @@ export default function TestForm() {
                 </FormControl>
               </SimpleGrid>
             </Stack>
-            {/* <Box
+            <Box
               px={{
                 base: 4,
                 sm: 6,
@@ -341,10 +342,12 @@ export default function TestForm() {
               bg="gray.50"
               textAlign="right"
             >
-              <Button type="submit" color="#4d5499" fontWeight="md">
-                Save
-              </Button>
-            </Box> */}
+              <Link to={"/v1"}>
+                <Button type="submit" color="#4d5498" fontWeight="md">
+                  Save
+                </Button>
+              </Link>
+            </Box>
           </chakra.form>
         </GridItem>
       </SimpleGrid>

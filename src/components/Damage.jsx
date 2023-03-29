@@ -204,7 +204,7 @@ const DamageProduct = () => {
             Damaged Products
           </chakra.h3>
 
-          <Link to="/login">
+          <Link to="/v2">
             <Button colorScheme="teal">Logout</Button>
           </Link>
         </Flex>

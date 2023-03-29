@@ -130,7 +130,7 @@ const SidebarContent = ({ ...props }) => (
         <NavItem icon={AiOutlineHome}>Dashboard</NavItem>
       </Link>
       <NavItem icon={AiOutlineTeam}>All Products</NavItem> */}
-      <Link to="/test">
+      <Link to="/addp">
         <NavItem icon={BsFolder2}>Add Products</NavItem>
       </Link>
       {/* <Link to="/damage">
